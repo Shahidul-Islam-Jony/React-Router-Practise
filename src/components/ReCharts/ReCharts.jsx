@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import { Area, AreaChart, CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 
 const ReCharts = () => {
@@ -14,7 +15,6 @@ const ReCharts = () => {
         { id: 9, name: 'Student 9', physics: 90, math: 93, chemistry: 89 },
         { id: 10, name: 'Student 10', physics: 83, math: 86, chemistry: 80 },
     ];
-
 
     return (
         <div>
