@@ -1,8 +1,12 @@
-nav a{
+/* nav a{
     margin-right: 30px;
     font-size: 1.5rem;
     font-weight:500;
 }
 nav{
     margin-bottom: 15px;
+} */
+
+nav a.active{
+    color:orangered;
 }
