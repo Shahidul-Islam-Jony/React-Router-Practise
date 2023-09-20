@@ -1,8 +1,14 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 
 const Users = () => {
     const users = useLoaderData();
     // console.log(users);
+
+    const navigate = useNavigate();
+    const handleDetails=(id)=>{
+        navigate(`/user/${id}`)
+    }
+
     return (
         <div>
             <p className="text-3xl font-extrabold mb-4">Users:{users.length}</p>
@@ -14,6 +20,7 @@ const Users = () => {
                             <p className="text-xl font-semibold">Email: {user.email}</p>
                             <p className="text-xl font-medium">Phone: {user.phone}</p>
                             <button className="bg-blue-500 text-white font-bold px-4 py-1 mt-4 rounded-md"><Link to={`/user/${user.id}`} >See Details</Link></button>
+                            <button onClick={()=>handleDetails(user.id)} className="bg-blue-500 ml-2 px-4 py-1 rounded-md text-white">Details</button>
                         </div>
                     )
                 }
